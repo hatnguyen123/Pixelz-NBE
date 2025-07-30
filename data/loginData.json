@@ -1,0 +1,37 @@
+[
+  {
+    "caseId": "TC01",
+    "email": "hatnt+testsaw6@pixelz.com",
+    "password": "123456",
+    "expectSuccess": true,
+    "description": "Đăng nhập thành công"
+  },
+  {
+    "caseId": "TC02",
+    "email": "invalid-email",
+    "password": "123456",
+    "expectSuccess": false,
+    "description": "Sai định dạng email"
+  },
+  {
+    "caseId": "TC03",
+    "email": "",
+    "password": "123456",
+    "expectSuccess": false,
+    "description": "Bỏ trống email"
+  },
+  {
+    "caseId": "TC04",
+    "email": "hatnt+testsaw6@pixelz.com",
+    "password": "",
+    "expectSuccess": false,
+    "description": "Bỏ trống password"
+  },
+  {
+    "caseId": "TC05",
+    "email": "hatnt+testsaw6@pixelz.com",
+    "password": "wrongpassword",
+    "expectSuccess": false,
+    "description": "Sai password"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "caseId": "HC01",
+    "email": "hatnt+testsaw6@pixelz.com",
+    "password": "123456",
+    "expectedType": "ENTERPRISE"
+  },
+  {
+    "caseId": "HC02",
+    "email": "hatnt+testsaw11@pixelz.com",
+    "password": "123456",
+    "expectedType": "SOLO"
+  }
+]
