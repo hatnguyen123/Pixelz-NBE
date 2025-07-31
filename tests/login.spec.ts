@@ -13,7 +13,7 @@ test.describe('Login multiple test cases from JSON', () => {
       console.log(`\n--- Running ${data.caseId} ---`);
 
       await loginPage.goto();
-      await loginPage.login(data.email, data.password);
+      await loginPage.login(data.email, data.password, data.expectSuccess);
 
       if (data.expectSuccess) {
         await page.waitForURL('**/Home', { timeout: 10000 });

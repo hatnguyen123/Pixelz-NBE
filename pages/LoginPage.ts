@@ -14,14 +14,21 @@ export class LoginPage {
     await this.page.goto('/', { waitUntil: 'commit' });
   }
 
-  async login(email: string, password: string) {
+  async login(email: string, password: string, expectSuccess = false) {
     if (email !== undefined) {
       await this.page.locator(this.emailInput).fill(email);
     }
     if (password !== undefined) {
       await this.page.locator(this.passwordInput).fill(password);
     }
-    await this.page.locator(this.passwordInput).press('Enter');
+    if (expectSuccess) {
+      await Promise.all([
+        this.page.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 15000 }),
+        this.page.locator(this.passwordInput).press('Enter'),
+      ]);
+    } else {
+      await this.page.locator(this.passwordInput).press('Enter');
+    }
   }
 
   async getHtml5Validation() {
