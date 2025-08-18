@@ -3,6 +3,8 @@ name: Run Playwright Tests Daily
 on:
   push:
     branches: [main]
+     # schedule:
+    #   - cron: '0 1 * * *' # 08:00 sáng giờ Việt Nam (UTC+7)
   workflow_dispatch:
 
 jobs:
